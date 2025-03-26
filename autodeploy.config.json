@@ -1,0 +1,38 @@
+{
+  "environments": {
+    "preview": {
+      "vercelProject": "myapp-preview",
+      "apiBaseUrl": "https://api.preview.example.com",
+      "environmentVariables": {
+        "NODE_ENV": "development",
+        "API_KEY": "preview-api-key"
+      },
+      "healthCheck": {
+        "expectedStatus": 200,
+        "timeoutMs": 10000,
+        "checkIntervalMs": 30000
+      },
+      "analytics": {
+        "trackingId": "preview-analytics-id",
+        "collectMetrics": true
+      }
+    },
+    "production": {
+      "vercelProject": "myapp-prod",
+      "apiBaseUrl": "https://api.example.com",
+      "environmentVariables": {
+        "NODE_ENV": "production",
+        "API_KEY": "production-api-key"
+      },
+      "healthCheck": {
+        "expectedStatus": 200,
+        "timeoutMs": 5000,
+        "checkIntervalMs": 60000
+      },
+      "analytics": {
+        "trackingId": "production-analytics-id",
+        "collectMetrics": true
+      }
+    }
+  }
+}
